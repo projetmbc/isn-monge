@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+  </head>
+
+  <body>
+    <h1>Mettre en forme une page HTML</h1>
+
+      <h2>Séparer le fond et la forme</h2>
+        <p>
+Tout comme un écrivain et un journaliste ne se préoccupent pas de la mise en forme de ce qu'ils écrivent, une bonne pratique, lorsque l'on rédige une page HTML, consiste à ne pas mélanger ce que l'on écrit et comment on le met en forme.
+        </p>
+        <p>
+Vouloir à la fois mettre en forme un document tout en le rédigeant est une perte de temps.
+De plus, avec de bons outils, si l'on a bien séparé le fond et la forme, on peut très vite changer l'apparence d'un site.
+
+<!-- Voir cette page pour afficher des caractères spéciaux en HTML :
+http://lorem-ipsum.studiovitamine.com/caracteres-speciaux,287,fr.html -->
+Un exemple très <em>&laquo; vendeur &raquo;</em> est le site <a href="http://www.csszengarden.com">CSS Zen Garden</a> : chacune des pages présentées à <a href="http://www.mezzoblue.com/zengarden/alldesigns/">cette adresse</a> utilisent <strong>le même code HTML</strong> !
+
+En comparant <a href="http://www.csszengarden.com/220/">cette page</a> et <a href="http://www.csszengarden.com/221/">celle-ci</a>, cela semble dur à croire mais c'est bien le cas.
+
+Pour les plus soupçonneux, et ils ont raison, il vous suffit d'ouvrir chacune de ces deux pages avec Firefox, et de faire un clic droit pour afficher un menu où vous pourrez cliquer sur <emp>&laquo; Code source de la page &raquo;</emp> afin de voir le code HTML utilisé. Nous allons bientôt comprendre comment ce tour de passe-passe est possible.
+        </p>
+
+
+      <h2>Le fond, c'est quoi !</h2>
+        <p>
+Sur la majorité des navigateurs, <b>ce mot</b> et <strong>celui-ci</strong> apparaissent par défaut tous les deux en gras. Pourtant les codes HTML correspondants sont différents : on a utilisé <code>&lt;b&gt;ce mot&lt;/b&gt;</code> et <code>&lt;strong&gt;celui-ci&lt;/strong&gt;</code>.
+
+Dans un cas, <code>b</code> fait référence à l'initiale de <em>&laquo; bold &raquo;</em>, soit <em>&laquo; gras &raquo;</em> en anglais, tandis que <em>&laquo; strong &raquo;</em> signifie <em>&laquo; fort &raquo;</em>.
+
+Dans un cas, on parle de mise en forme, et dans l'autre on indique un mot fort, important dans la compréhension de ce qui est écrit. L'emploi de <code>&lt;b&gt;ce mot&lt;/b&gt;</code> est donc une mauvaise chose !
+        </p>
+        <p>
+De même, bien que <code>&lt;i&gt;ce mot&lt;/i&gt;</code> et <code>&lt;em&gt;cet autre&lt;/em&gt;</code> donnent les mises en forme de <i>ce mot</i> et de <em>cet autre</em>, on utilisera <code>&lt;em&gt;cet autre&lt;/em&gt;</code> mettre en avant un mot de façon plus douce qu'avec <code>&lt;strong&gt;...&lt;/strong&gt;</code>.
+        </p>
+        <p>
+<!-- Voir cette page pour les caractères spéciaux :
+http://lorem-ipsum.studiovitamine.com/caracteres-speciaux,287,fr.html -->
+Vous connaissez d'autres balises donnant un sens au contenu comme <code>&lt;h2&gt;Un titre&lt;/h2&gt;</code>, ou bien <code>&lt;p&gt;Un paragraphe&lt;/p&gt;</code>.
+        </p>
+
+
+      <h2>Mettre en forme, d'accord. Mais comment ?</h2>
+        <p>
+Cette page vue dans l'éditeur intégré de SageMathCloud n'aura pas la même mise en forme que si vous la regardez directement dans un navigateur comme Firefox : attardez vous sur les hyperliens et sur les bouts de codes comme <code>ce bout de code</code>.
+        </p>
+        <p>
+À quoi cela est-il dû ? En fait, SageMathCloud utilise une technique qui permet de choisir, en autres choses, la mise en forme de ce qui trouve dans les balises <code>&lt;a href="..."&gt;...&lt;/a&gt;</code> et <code>&lt;code&gt;...&lt;/code&gt;</code>.
+
+Ceci se fait via l'utilisation des règles de style CSS. Cet acronyme signifie <em>&laquo; Cascading Style Sheet&raquo;</em> soit <em>&laquo; Feuille de style en cascade&raquo;</em> <em>(le terme &laquo; cascade &raquo; se justifie pour des raisons techniques expliqués dans le document Jupyter associé à cette page)</em>.
+        </p>
+        <p>
+Pour voir le CSS en action, le plus simple est d'ouvrir <a href='example_css.html'>cette nouvelle page</a> qui reprend exactement le même code HTML que l'actuelle page mais lui ajoute des règles simples de mise en forme de très mauvais goût <em>(du coup, cette dernière phrase n'a plus de sens une fois le lien précédent ouvert)</em>.
+        </p>
+  </body>
+</html>

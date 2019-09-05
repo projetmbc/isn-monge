@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<!--
+Sources:
+    * http://codepen.io/surjithctly/pen/pLDwe
+    * http://code.tutsplus.com/fr/tutorials/the-30-css-selectors-you-must-memorize--net-16048
+    * Une question proposée par Pascal BUSAC
+-->
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+
+    <style>
+/* Cosmétique */
+        strong{
+            color: rgb(180, 15, 15);
+            font-size: 1.3em;
+        }
+        div.demo {
+            font-size: 0.8em;
+            background-image: linear-gradient(
+                to right,
+                rgba(127,140,141,0.2),
+                rgba(0,0,0,0)
+            );
+            padding: 12px;
+            border: 1px solid black;
+            display: none;
+        }
+
+/* Interaction */
+        input[id^="demo"] {
+            position:absolute;
+            appearance:none;
+            cursor:pointer;
+            left:-100%;
+            top:-100%;
+        }
+
+        input[id^="demo"] + label {
+            background-color: black;
+            color: white;
+            padding: 4px;
+        }
+
+        input[id^="demo"]:checked ~ div:first-of-type{
+            display: block;
+        }
+    </style>
+  </head>
+
+  <body>
+      <h1>Une petite démonstration de ce que permet CSS3</h1>
+      <p>
+<strong>Les codes CSS utilisés dans cette page vont bien au-delà de ce qui est attendu en ISN au lycée.</strong>
+      </p>
+
+      <p>
+Ceci étant dit, je vous propose cet exemple qui fait suite à une question d'un collègue désirant cacher par défaut les démonstrations dans ses documents HTML, tout en ayant la possibilité de les faire apparaître via un simple clic.
+      </p>
+
+      <p>
+Les liens indiqués dans le code CSS de cette page, et un peu de réflexion ont permis d'aboutir à l'effet suivant <em>(demandez-moi si vraiment vous voulez comprendre le code CSS utilisé et que vous ne comprenez pas de vous-même)</em>.
+      </p>
+
+      <p>
+Cliquer sur <em>&laquo; Irrationalité de &pi; &raquo;</em> ci-dessous et vous saurez pourquoi le nombre &pi; est irrationnel.
+      </p>
+      <div>
+        <input type="checkbox" id="demo_A" />
+        <label for="demo_A">Irrationalité de &pi;</label>
+        <div class="demo">
+          <p>
+Mettre un CHEVAL sur un OISEAU étant irrationnel, nous pouvons affirmer que CHEVAL / OISEAU est irrationnel.
+          </p>
+          <p>
+Ensuite
+CHEVAL = C &times; H &times; E &times; V &times; A &times; L
+       = V &times; A &times; C &times; H &times; E &times; L
+       = VACHE &times; L
+où l'on peut constater que VACHE = BÉTA &times; &pi; car une vache est une bête à pis, c'est à dire 1 BÉTA &pi;. Notons que de même OISEAU = BÉTA &times; L.
+          </p>
+          <p>
+Les deux points précédents nous donnent l'irrationnalité de CHEVAL / OISEAU = (BÉTA &times; &pi; &times; L) / (BÉTA &times; L) = &pi;.
+          </p>
+          <p>
+CQFD ! Facile. Non ?
+          </p>
+        </div>
+      </div>
+
+      <p>
+Un autre exemple pour finir.
+      </p>
+      <div>
+        <input type="checkbox" id="demo_B" />
+        <label for="demo_B">Les trois secrets pour réussir dans la vie</label>
+        <div class="demo">
+          <p>
+Secret n°1: ne pas donner tous ses secrets !
+          </p>
+        </div>
+      </div>
+  </body>
+</html>
