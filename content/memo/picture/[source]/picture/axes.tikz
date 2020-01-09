@@ -1,0 +1,49 @@
+\definecolor{qqffqq}{rgb}{0.,1.,0.}
+\definecolor{zzttqq}{rgb}{0.6,0.2,0.}
+\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.6cm,y=0.6cm]
+\clip(-3.840937894924428,-1.30338099546581) rectangle (6.243481310215926,5.683680882381437);
+\fill[color=ffqqqq,fill=ffqqqq,fill opacity=1.0] (0.,4.) -- (1.,4.) -- (1.,3.) -- (0.,3.) -- cycle;
+\fill[color=qqffqq,fill=qqffqq,fill opacity=1.0] (2.,2.) -- (3.,2.) -- (3.,1.) -- (2.,1.) -- cycle;
+\fill[fill=black,fill opacity=1.0] (-2.,2.) -- (1.,2.) -- (1.,1.) -- (-2.,1.) -- cycle;
+\draw (-3.,5.)-- (4.,5.);
+\draw (4.,5.)-- (4.,1.);
+\draw (4.,1.)-- (-3.,1.);
+\draw (-3.,1.)-- (-3.,5.);
+\draw (-2.,5.)-- (-2.,1.);
+\draw (-1.,1.)-- (-1.,5.);
+\draw (0.,5.)-- (0.,1.);
+\draw (1.,1.)-- (1.,5.);
+\draw (2.,5.)-- (2.,1.);
+\draw (3.,1.)-- (3.,5.);
+\draw (4.,4.)-- (-3.,4.);
+\draw (-3.,3.)-- (4.,3.);
+\draw (4.,2.)-- (-3.,2.);
+\draw [->] (-3.,5.) -- (-3.,-1.);
+\draw [->] (-3.,5.) -- (6.,5.);
+\draw (5.681635097358106,5.770118761282641) node[anchor=north west] {$\mathbf{x}$};
+\draw (-3.696874763422423,-0.5254400853549817) node[anchor=north west] {$\mathbf{y}$};
+\draw [color=zzttqq] (0.,4.)-- (1.,4.);
+\draw [color=zzttqq] (1.,4.)-- (1.,3.);
+\draw [color=zzttqq] (1.,3.)-- (0.,3.);
+\draw [color=zzttqq] (0.,3.)-- (0.,4.);
+\draw [color=zzttqq] (2.,2.)-- (3.,2.);
+\draw [color=zzttqq] (3.,2.)-- (3.,1.);
+\draw [color=zzttqq] (3.,1.)-- (2.,1.);
+\draw [color=zzttqq] (2.,1.)-- (2.,2.);
+\draw (-2.,2.)-- (1.,2.);
+\draw (1.,2.)-- (1.,1.);
+\draw (1.,1.)-- (-2.,1.);
+\draw (-2.,1.)-- (-2.,2.);
+\draw (-2.803683348109992,5.770118761282641) node[anchor=north west] {$\mathbf{0}$};
+\draw (-1.7952414275959563,5.770118761282641) node[anchor=north west] {$\mathbf{1}$};
+\draw (-0.8012058202321215,5.770118761282641) node[anchor=north west] {$\mathbf{2}$};
+\draw (0.19282978713171336,5.770118761282641) node[anchor=north west] {$\mathbf{3}$};
+\draw (1.2012717076457486,5.770118761282641) node[anchor=north west] {$\mathbf{4}$};
+\draw (2.1953073150095834,5.770118761282641) node[anchor=north west] {$\mathbf{5}$};
+\draw (3.203749235523619,5.770118761282641) node[anchor=north west] {$\mathbf{6}$};
+\draw (-3.696874763422423,4.948958911721212) node[anchor=north west] {$\mathbf{0}$};
+\draw (-3.696874763422423,3.9549233043573766) node[anchor=north west] {$\mathbf{1}$};
+\draw (-3.696874763422423,2.946481383843341) node[anchor=north west] {$\mathbf{2}$};
+\draw (-3.696874763422423,1.9524457764795058) node[anchor=north west] {$\mathbf{3}$};
+\end{tikzpicture}

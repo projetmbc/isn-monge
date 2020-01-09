@@ -1,0 +1,273 @@
+\subsection{Formats classiques d'images}
+
+% ------------- %
+
+\frame{
+	\frametitle{Formats \texttt{ASCII}}
+
+	Caractéristiques générales.
+
+	\begin{itemize}[<+(1)->]		
+		\item Formats \texttt{ASCII} \og{}manipulables à la main\fg{}.
+
+		\begin{itemize}	
+			\item Windows : utilisation de Notepad++.
+			
+			\item Linux : Geany.
+			
+			\item Mac OS : Atom.
+		\end{itemize}		
+		
+		\item Formats pris en charge par Gimp.
+		
+		\item Trois versions.
+
+		\begin{itemize}	
+			\item Portable Bitmap (PBM) : image en noir et blanc.
+			
+			\item Portable Graymap (PGM) : image en niveau de gris.
+			
+			\item Portable Pixmap (PPM) : image en couleur.
+		\end{itemize}
+		
+		\item Pour ceux présentés, pas de compression : les infos de chaque pixel directement dans le fichier image.
+	\end{itemize}		
+}
+
+
+% ------------- %
+
+\frame{
+	\frametitle{Formats \texttt{ASCII} : Portable Bitmap (PBM)}
+
+	Spécifications techniques du fichier.
+
+	\begin{itemize}[<+(1)->]		
+		\item Extension du fichier : \texttt{.pbm}.
+		
+		\item 1ère ligne ne contenant que le texte \texttt{P1}.
+		
+		\item 2ème ligne : dimensions sous la forme 
+		\texttt{LARGEUR HAUTEUR}.
+		
+		\item À partir de la 3ème ligne.
+
+		\begin{itemize}	
+			\item \texttt{1} code le noir et \texttt{0} le blanc.
+			\item Espaces possibles mais pas indispensables.
+			\item Pas plus de 70 caractères par ligne.
+		\end{itemize}
+		
+		\item Des commentaires : texte précédé par le symbole \texttt{\#}.
+	\end{itemize}		
+}
+
+
+% ------------- %
+
+\begin{frame}[fragile]
+	\frametitle{Formats \texttt{ASCII} : Portable Bitmap (PBM)}
+
+	Un exemple.
+
+	\begin{multicols}{2}
+		\scriptsize
+		\begin{verbatim}
+P1     # Image en noir et blanc
+13 11  # Largeur = 13  Hauteur = 11
+0000000000000
+0000000000000
+0001111100000
+0001000100000
+0001011111000
+0001010101000
+0001111101000
+0000010001000
+0000011111000
+0000000000000
+0000000000000
+		\end{verbatim}
+		
+		\vfill
+		\columnbreak
+		
+		\begin{center}
+			\framebox{\includegraphics[width=0.5\textwidth]{picture/carres.png}}
+			
+			\medskip
+			
+			\textbf{ATTENTION !} 
+			
+			Image encadrée et agrandie.
+		\end{center}
+	\end{multicols}		
+\end{frame}
+
+
+% ------------- %
+
+\frame{
+	\frametitle{Formats \texttt{ASCII} : Portable Graymap (PGM)}
+
+	Spécifications techniques du fichier.
+
+	\begin{itemize}[<+(1)->]		
+		\item Extension du fichier : \texttt{.pgm}.
+		
+		\item 1ère ligne ne contenant que le texte \texttt{P2}.
+		
+		\item 2ème ligne : dimensions sous la forme 
+		\texttt{LARGEUR HAUTEUR}.
+		
+		\item 3ème ligne : \texttt{MAX} la valeur maximale de niveau de gris.
+		
+		On doit avoir \texttt{MAX} $\leqslant$ 65 536.
+		
+		\item À partir de la 4ème ligne.
+
+		\begin{itemize}	
+			\item Gris codé de \texttt{0} pour le noir à \texttt{MAX} pour le blanc.
+			\item Espaces indispensables.
+			\item Pas plus de 70 caractères par ligne.
+		\end{itemize}
+		
+		\item Des commentaires : texte précédé par le symbole \texttt{\#}.
+	\end{itemize}		
+}
+
+
+% ------------- %
+
+\begin{frame}[fragile]
+	\frametitle{Formats \texttt{ASCII} : Portable Graymap (PGM)}
+
+	Un exemple.
+
+	\begin{multicols}{2}
+		\scriptsize
+		\begin{verbatim}
+P2   # Image en niveau de gris
+8 7  # Largeur = 8  Hauteur = 7
+10   # 11 Niveaux de gris
+10 10 10 10 10 10 10 10
+10 0  0  0  0  0  10 10
+10 0  10 10 10 0  5  10
+10 0  10 10 10 0  5  10
+10 0  10 10 10 0  5  10
+10 0  0  0  0  0  5  10
+10 10 5  5  5  5  5  10
+10 10 10 10 10 10 10 10
+		\end{verbatim}
+		
+		\vfill
+		\columnbreak
+		
+		\vspace{-0.5em}
+		
+		\begin{center}
+			\framebox{\includegraphics[width=0.5\textwidth]{picture/carre_ombre.png}}
+			
+			\medskip
+			
+			\textbf{ATTENTION !} 
+			
+			Image encadrée et agrandie.
+		\end{center}
+	\end{multicols}		
+\end{frame}
+
+
+% ------------- %
+
+\frame{
+	\frametitle{Formats \texttt{ASCII} : Portable Pixmap (PPM)}
+
+	Spécifications techniques du fichier.
+
+	\begin{itemize}[<+(1)->]		
+		\item Extension du fichier : \texttt{.ppm}.
+		
+		\item 1ère ligne ne contenant que le texte \texttt{P3}.
+		
+		\item 2ème ligne : dimensions sous la forme 
+		\texttt{LARGEUR HAUTEUR}.
+		
+		\item 3ème ligne : \texttt{MAX} la valeur maximale pour le rouge, le vert et le bleu. On doit avoir \texttt{MAX} $\leqslant$ 65 536.
+		
+		\item À partir de la 4ème ligne.
+
+		\begin{itemize}	
+			\item Couleur codé au format R G B.
+			\item Espaces indispensables.
+			\item Pas plus de 70 caractères par ligne.
+		\end{itemize}
+		
+		\item Des commentaires : texte précédé par le symbole \texttt{\#}.
+	\end{itemize}		
+}
+
+
+% ------------- %
+
+\begin{frame}[fragile]
+	\frametitle{Formats \texttt{ASCII} : Portable Pixmap (PPM)}
+
+	Un exemple.
+
+	\begin{center}
+		\scriptsize
+		\begin{verbatim}
+P3   # Image en couleur
+7 2  # Largeur = 7 Hauteur = 2
+10   # 11 niveaux pour R, V ou B
+0 0 0   5 0 0   0 0 0   0 5 0   0 0 0   8 8 8   0 0 0
+0 0 0   5 0 0   0 0 0   0 5 0   0 0 0   8 8 8   0 0 0
+		\end{verbatim}
+		
+		\bigskip
+		
+		\framebox{\includegraphics[width=0.5\textwidth]{picture/trois_traits.png}}
+		
+		\medskip
+			
+		\textbf{ATTENTION !} 
+			
+		Image encadrée et agrandie.
+	\end{center}		
+\end{frame}
+
+
+% ------------- %
+
+\frame{
+	\frametitle{Formats utiles pour le web}
+
+	\og{}Non manipulables à la main\fg{} :
+	utilisation de pillow (Python 3).
+
+	\begin{itemize}[<+(1)->]		
+		\item Graphics Interchange Format (GIF)
+		
+		\begin{itemize}		
+			\item Extension du fichier : \texttt{.gif}.
+			\item Transparence et compression (avec perte).
+			\item Affichage progressif.
+		\end{itemize}
+	
+		\item Portable Network Graphics (PNG) 
+		
+		\begin{itemize}		
+			\item Extension du fichier : \texttt{.png}.
+			\item Transparence et compression sans perte.
+			\item Affichage progressif.
+		\end{itemize}
+	
+		\item Joint Photographic Experts Group (JPEG)
+		
+		\begin{itemize}		
+			\item Extension du fichier : \texttt{.jpg} ou \texttt{.jpeg}.
+			\item Pas de transparence mais compression réglable  (avec perte).
+			\item Affichage progressif.
+		\end{itemize}
+	\end{itemize}		
+}

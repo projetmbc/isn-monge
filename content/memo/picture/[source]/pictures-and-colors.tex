@@ -1,0 +1,100 @@
+\documentclass{beamer}
+    \usepackage[utf8x]{inputenc}
+
+    \usepackage{multicol}
+
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+
+	\usepackage{multimedia}
+    \usepackage{graphicx}
+
+    \usepackage[french]{babel}
+    	
+	\usetheme{Warsaw}
+	
+	\usepackage{pgf,tikz}
+	\usepackage{mathrsfs}
+	\usetikzlibrary{arrows}
+
+	\usepackage[
+        type={CC},
+        modifier={by-nc-sa},
+        version={4.0},
+    ]{doclicense}
+
+
+
+\begin{document}
+
+%%%%%%%%%%%%%%
+% COUVERTURE %
+%%%%%%%%%%%%%%
+
+\title{Images, couleurs et numérisation} 
+\author{Lycée Monge, Chambéry} 
+\date{2 Décembre 2015 \\ \bigskip {\tiny \doclicenseThis}} 
+
+
+%%%%%%%%%%%%%%%%%%%%%%
+% Table des matières %
+%%%%%%%%%%%%%%%%%%%%%%
+
+\frame{\titlepage} 
+
+\setcounter{tocdepth}{1}
+\frame{
+	\frametitle{Table des matières}
+
+%	{
+%		\footnotesize
+%		
+%		\begin{multicols}{2}
+			\tableofcontents
+%		\end{multicols}
+%	}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Après la forme, le fond... %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Partie 1 : Images du point de vue de l'homme}  
+
+\input{physiology/vision.tex}
+          
+
+\section{Partie 2 : Numériser les images}  
+
+\input{picture/numerize.tex}
+          
+
+\section{Partie 3 : Quelques formats d'images}  
+
+\input{picture/format.tex}
+
+
+\section{Sources utilisées}  
+
+\begin{frame}
+	\frametitle{Références}
+
+	\begin{itemize}
+		\item \textit{\og{}Introduction au traitement d'images [2\textup{e} édition]\fg{}} de Dian \textsc{Lingrand} édité par Vuibert.
+
+		\item \textit{\og{}Formation \textsc{\textit{Lyon}} ISN 2015 : Modules \& Représentation d'images\fg{}} de Nicolas-François \textsc{Buyle-Bodin}.
+
+		\item \textit{\og{}Numérisation [Cours ISN 2012-13]\fg{}} de Xavier \textsc{Ouvrard}.
+		
+		\item \url{fr.wikipedia.org/wiki/Portable_pixmap}
+		
+		\item \url{fr.wikipedia.org/wiki/Graphics_Interchange_Format}
+		
+		\item \url{fr.wikipedia.org/wiki/Portable_Network_Graphics}
+		
+		\item \url{fr.wikipedia.org/wiki/JPEG}
+	\end{itemize}
+\end{frame}
+ 
+\end{document}

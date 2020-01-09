@@ -1,0 +1,221 @@
+\subsection{Images numériques}
+
+% ------------- %
+
+\frame{
+	\frametitle{Numériser, c'est coder !}
+
+	Quel codage choisir qui réponde aux contraintes technologiques ?
+		
+	\begin{itemize}[<+(1)->]
+		\item Images représentées.
+		
+		\begin{itemize}[<+(1)->]
+			\item Quels émetteurs rouges, verts et bleus activés ?
+
+			\item Quelle intensité pour un émetteur donné ?
+		\end{itemize}
+		
+		\item Images captées.
+		
+		\begin{itemize}[<+(1)->]
+			\item Quantifier les mesures physiques.
+		\end{itemize}
+			
+		\item Nécessité de définir des conventions.
+	\end{itemize}
+}
+
+
+% ------------- %
+
+\frame{
+	\frametitle{Coder les couleurs}
+
+	Le modèle RVB (Rouge-Vert-Bleu) ou RGB (Red-Green-Blue).
+	
+	\begin{itemize}[<+(1)->]
+		\item Souhait de modéliser les outils physiques utilisés.
+		
+		\item Pour chaque couleur : valeurs allant de $0$ (intensité nulle) 
+		
+		à $255$ (intensité maximale).
+		
+		\item Combien de chiffres nécessaires pour un codage binaire ?
+		
+		\pause 
+		
+		$256 = 2^8$ donc besoin d'au moins $3 \times 8 = 24$ 
+		chiffres en écriture binaire.
+	\end{itemize}
+}
+
+
+% ------------- %
+
+\frame{
+	\frametitle{Coder les couleurs}
+
+	Exemples de couleur RGB avec la notation
+	(Red , Green , Blue).
+	
+	\begin{itemize}[<+(1)->]
+		\item Quelle couleur correspond à $(255 , 0 , 0)$ ?
+		
+		\pause
+		Avec \LaTeX, on obtient
+		\framebox{\textcolor[RGB]{255 , 0 , 0}{$\blacksquare\!\blacksquare\!\blacksquare$}} 
+		qui est un rouge.
+		
+		\item Quelle couleur correspond à $(0 , 255 , 0)$ ?
+		
+		\pause
+		Avec \LaTeX, on obtient
+		\framebox{\textcolor[RGB]{0 , 255 , 0}{$\blacksquare\!\blacksquare\!\blacksquare$}} 
+		qui est un vert.
+		
+		\item Quelle couleur correspond à $(0 , 0, 255)$ ?
+		
+		\pause
+		Avec \LaTeX, on obtient
+		\framebox{\textcolor[RGB]{0 , 0, 255}{$\blacksquare\!\blacksquare\!\blacksquare$}} 
+		qui est un bleu.
+		
+		\item Quel type de couleur correspond à $(200 , 200, 200)$ ?
+		
+		\pause
+		Avec \LaTeX, on obtient
+		\framebox{\textcolor[RGB]{200, 200, 200}{$\blacksquare\!\blacksquare\!\blacksquare$}} 
+		qui est un gris.
+		
+		Plus généralement, $256$ nuances de gris grâce à
+		$(n , n , n)$. 
+	\end{itemize}
+}
+
+
+% ------------- %
+
+\frame{
+	\frametitle{Coder les couleurs}
+
+	Exemples de couleur RGB avec la notation
+	(Red , Green , Blue).
+	
+	\vspace{-.7em}
+	\begin{flushright}
+		\scriptsize (la suite)
+	\end{flushright}
+	\vspace{-1.2em}
+	
+	\begin{itemize}[<+(1)->]		
+		\item Comment obtenir du blanc ?
+		
+		\pause
+		$(255 , 255, 255)$ nous donne avec \LaTeX : \framebox{\textcolor[RGB]{255,255,255}{$\blacksquare\!\blacksquare\!\blacksquare$}} .
+		
+		\item Comment obtenir du noir ?
+		
+		\pause
+		$(0 , 0, 0)$ nous donne avec \LaTeX : \framebox{\textcolor[RGB]{0,0,0}{$\blacksquare\!\blacksquare\!\blacksquare$}} .
+		
+		\item Proposons un codage correspondant à un jaune.
+		
+		\pause
+		Mélangeons du rouge et du vert (pas simple a priori). 
+		
+		$(255 , 255, 0)$ nous donne avec \LaTeX : \framebox{\textcolor[RGB]{255,255,0}{$\blacksquare\!\blacksquare\!\blacksquare$}} .
+	\end{itemize}
+}
+
+
+% ------------- %
+
+\frame{
+	\frametitle{Coder les couleurs}
+
+	Une autre convention pour le format RGB.
+	
+	\pause
+	\medskip
+	
+	$256 = 2^8 = (2^4)^2 = 16^2$ donc deux chiffres en écriture hexadécimale pour chacune des couleurs.
+	
+	\pause
+	\medskip
+	
+	Collage successif de ces écritures dans l'ordre R-G-B.
+	
+	\medskip
+	
+	$3 \times 2 = 6$ chiffres au total pour les trois couleurs.
+	
+	\pause
+	\medskip
+	
+	Par exemple, $(0 , 141, 255)$ s'écrit
+	\pause
+	008DFF ou juste 8DFF
+	en utilisant $141 = 128 + 13 = 8 \times 16 + 13$.
+	
+	\pause
+	\medskip
+	
+	Un autre exemple : (30 , 173, 5) s'écrit
+	\pause
+	1EAD05.
+}
+
+
+% ------------- %
+
+\frame{
+	\frametitle{Repérage des émetteurs et des récepteurs}
+
+	Reste à indiquer où une couleur sera activée, ou bien à savoir 
+	
+	où elle a été mesurée (quantifiée).
+	
+	\pause
+	\medskip
+	
+	\textbf{Attention !} Convention des écritures manuscrites  \og{}latines\fg{}
+	
+	ou de la machine à écrire.
+	
+	\begin{center}
+		\input{picture/axes.tikz}
+		
+		\vspace{-0.5em}
+		{\scriptsize Graphique produit avec GeoGebra}
+	\end{center}
+}
+
+
+% ------------- %
+
+\frame{
+	\frametitle{Repérage des émetteurs et des récepteurs}
+	
+	\begin{center}
+		\input{picture/axes.tikz}
+	\end{center}
+
+	\vspace{-0.5em}
+	
+	Cellule \textcolor[RGB]{255,0,0}{rouge} en 
+	\pause
+	$(x , y) = (3, 1)$.
+	
+	\medskip
+	
+	Cellule \textcolor[RGB]{0,255,0}{verte} en 
+	\pause
+	$(x , y) = (5, 3)$.
+	
+	\medskip
+	
+	Couleur des cellules en $(1, 3)$ , $(2, 3)$ et $(3, 3)$ :
+	\pause
+	le noir. 
+}
